@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.1" branch-rate="0.04" lines-covered="24" lines-valid="230" branches-covered="7" branches-valid="175" complexity="27" version="8.2.0.0" timestamp="1686863226">
+  <sources>
+    <source>/Users/eonno/work/certificate-usage/CertificateUsage</source>
+    <source>/Users/eonno/work/certificate-usage/CertificateUsage.Api</source>
+    <source>/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints</source>
+    <source>/Users/eonno/work/certificate-usage/CertificateUsage.Api/Service</source>
+    <source>/Users/eonno/work/certificate-usage/CertificateUsage.Listener</source>
+    <source>/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events</source>
+  </sources>
+  <packages>
+    <package name="CertificateUsage" line-rate="0" branch-rate="0" complexity="4.71">
+      <classes>
+        <class name="&lt;StartupCode$CertificateUsage&gt;.$CertificateUsage.Config" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Config.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name=".cctor" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="false" />
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="false" />
+            <line number="8" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Config" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Config.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="connString" signature="System.String ()" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Domain/BillingPeriod" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Domain.fs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="InsideOrBefore" signature="System.Boolean (System.DateTime)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="43" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Intersects" signature="System.Boolean (System.DateTime)" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="true" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="104" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="40" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="true" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="104" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="40" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.BenefitPeriod" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/BenefitPeriod.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getInactiveBenefitPeriods" signature="Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto&gt; (Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="getOptionalActiveBenefitPeriod" signature="Microsoft.FSharp.Core.FSharpOption`1&lt;CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto&gt; (Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.BenefitPeriod/getInactiveBenefitPeriods@25" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/BenefitPeriod.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="System.Boolean (CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.BenefitPeriod/getOptionalActiveBenefitPeriod@22" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/BenefitPeriod.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="System.Boolean (CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.Dto" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/Dto.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getActiveCert" signature="Microsoft.FSharp.Core.FSharpOption`1&lt;System.String&gt; (Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.Dto/MemberEventDto" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/Dto.fs" line-rate="0" branch-rate="0" complexity="21.33">
+          <methods>
+            <method name="get_Cert" signature="Microsoft.FSharp.Core.FSharpOption`1&lt;System.String&gt; ()" line-rate="0" branch-rate="0" complexity="22">
+              <lines>
+                <line number="79" hits="0" branch="true" condition-coverage="0% (0/21)">
+                  <conditions>
+                    <condition number="51" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="80" hits="0" branch="false" />
+                <line number="81" hits="0" branch="false" />
+                <line number="82" hits="0" branch="false" />
+                <line number="83" hits="0" branch="false" />
+                <line number="84" hits="0" branch="false" />
+                <line number="85" hits="0" branch="false" />
+                <line number="86" hits="0" branch="false" />
+                <line number="87" hits="0" branch="false" />
+                <line number="88" hits="0" branch="false" />
+                <line number="89" hits="0" branch="false" />
+                <line number="90" hits="0" branch="false" />
+                <line number="91" hits="0" branch="false" />
+                <line number="92" hits="0" branch="false" />
+                <line number="93" hits="0" branch="false" />
+                <line number="94" hits="0" branch="false" />
+                <line number="95" hits="0" branch="false" />
+                <line number="96" hits="0" branch="false" />
+                <line number="97" hits="0" branch="false" />
+                <line number="98" hits="0" branch="false" />
+                <line number="100" hits="0" branch="false" />
+                <line number="101" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="30" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name="get_EventName" signature="System.String ()" line-rate="0" branch-rate="0" complexity="21">
+              <lines>
+                <line number="104" hits="0" branch="true" condition-coverage="0% (0/21)">
+                  <conditions>
+                    <condition number="73" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="105" hits="0" branch="false" />
+                <line number="106" hits="0" branch="false" />
+                <line number="107" hits="0" branch="false" />
+                <line number="108" hits="0" branch="false" />
+                <line number="109" hits="0" branch="false" />
+                <line number="110" hits="0" branch="false" />
+                <line number="111" hits="0" branch="false" />
+                <line number="112" hits="0" branch="false" />
+                <line number="113" hits="0" branch="false" />
+                <line number="114" hits="0" branch="false" />
+                <line number="115" hits="0" branch="false" />
+                <line number="116" hits="0" branch="false" />
+                <line number="117" hits="0" branch="false" />
+                <line number="118" hits="0" branch="false" />
+                <line number="119" hits="0" branch="false" />
+                <line number="120" hits="0" branch="false" />
+                <line number="121" hits="0" branch="false" />
+                <line number="122" hits="0" branch="false" />
+                <line number="123" hits="0" branch="false" />
+                <line number="124" hits="0" branch="false" />
+                <line number="125" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="get_MemberId" signature="System.Int32 ()" line-rate="0" branch-rate="0" complexity="21">
+              <lines>
+                <line number="55" hits="0" branch="true" condition-coverage="0% (0/21)">
+                  <conditions>
+                    <condition number="28" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="56" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
+                <line number="58" hits="0" branch="false" />
+                <line number="59" hits="0" branch="false" />
+                <line number="60" hits="0" branch="false" />
+                <line number="61" hits="0" branch="false" />
+                <line number="62" hits="0" branch="false" />
+                <line number="63" hits="0" branch="false" />
+                <line number="64" hits="0" branch="false" />
+                <line number="65" hits="0" branch="false" />
+                <line number="66" hits="0" branch="false" />
+                <line number="67" hits="0" branch="false" />
+                <line number="68" hits="0" branch="false" />
+                <line number="69" hits="0" branch="false" />
+                <line number="70" hits="0" branch="false" />
+                <line number="71" hits="0" branch="false" />
+                <line number="72" hits="0" branch="false" />
+                <line number="73" hits="0" branch="false" />
+                <line number="74" hits="0" branch="false" />
+                <line number="75" hits="0" branch="false" />
+                <line number="76" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="55" hits="0" branch="true" condition-coverage="0% (0/21)">
+              <conditions>
+                <condition number="28" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="56" hits="0" branch="false" />
+            <line number="57" hits="0" branch="false" />
+            <line number="58" hits="0" branch="false" />
+            <line number="59" hits="0" branch="false" />
+            <line number="60" hits="0" branch="false" />
+            <line number="61" hits="0" branch="false" />
+            <line number="62" hits="0" branch="false" />
+            <line number="63" hits="0" branch="false" />
+            <line number="64" hits="0" branch="false" />
+            <line number="65" hits="0" branch="false" />
+            <line number="66" hits="0" branch="false" />
+            <line number="67" hits="0" branch="false" />
+            <line number="68" hits="0" branch="false" />
+            <line number="69" hits="0" branch="false" />
+            <line number="70" hits="0" branch="false" />
+            <line number="71" hits="0" branch="false" />
+            <line number="72" hits="0" branch="false" />
+            <line number="73" hits="0" branch="false" />
+            <line number="74" hits="0" branch="false" />
+            <line number="75" hits="0" branch="false" />
+            <line number="76" hits="0" branch="false" />
+            <line number="79" hits="0" branch="true" condition-coverage="0% (0/21)">
+              <conditions>
+                <condition number="51" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="80" hits="0" branch="false" />
+            <line number="81" hits="0" branch="false" />
+            <line number="82" hits="0" branch="false" />
+            <line number="83" hits="0" branch="false" />
+            <line number="84" hits="0" branch="false" />
+            <line number="85" hits="0" branch="false" />
+            <line number="86" hits="0" branch="false" />
+            <line number="87" hits="0" branch="false" />
+            <line number="88" hits="0" branch="false" />
+            <line number="89" hits="0" branch="false" />
+            <line number="90" hits="0" branch="false" />
+            <line number="91" hits="0" branch="false" />
+            <line number="92" hits="0" branch="false" />
+            <line number="93" hits="0" branch="false" />
+            <line number="94" hits="0" branch="false" />
+            <line number="95" hits="0" branch="false" />
+            <line number="96" hits="0" branch="false" />
+            <line number="97" hits="0" branch="false" />
+            <line number="98" hits="0" branch="false" />
+            <line number="100" hits="0" branch="false" />
+            <line number="101" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="30" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="104" hits="0" branch="true" condition-coverage="0% (0/21)">
+              <conditions>
+                <condition number="73" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="105" hits="0" branch="false" />
+            <line number="106" hits="0" branch="false" />
+            <line number="107" hits="0" branch="false" />
+            <line number="108" hits="0" branch="false" />
+            <line number="109" hits="0" branch="false" />
+            <line number="110" hits="0" branch="false" />
+            <line number="111" hits="0" branch="false" />
+            <line number="112" hits="0" branch="false" />
+            <line number="113" hits="0" branch="false" />
+            <line number="114" hits="0" branch="false" />
+            <line number="115" hits="0" branch="false" />
+            <line number="116" hits="0" branch="false" />
+            <line number="117" hits="0" branch="false" />
+            <line number="118" hits="0" branch="false" />
+            <line number="119" hits="0" branch="false" />
+            <line number="120" hits="0" branch="false" />
+            <line number="121" hits="0" branch="false" />
+            <line number="122" hits="0" branch="false" />
+            <line number="123" hits="0" branch="false" />
+            <line number="124" hits="0" branch="false" />
+            <line number="125" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.Dto/Pipe #1 stage #1 at line 26@26" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/Dto.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="System.Boolean (CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Dto.Events.Dto/Pipe #1 stage #2 at line 27@27" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Dto/Events/Dto.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="System.String (CertificateUsage.Dto.Events.BenefitPeriod/BenefitPeriodDto)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="27" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Repository/Postgres" filename="/Users/eonno/work/certificate-usage/CertificateUsage/Repository.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="postgresManyNonQuery" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;System.Int32&gt;&gt; (System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.Tuple`2&lt;System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;System.Tuple`2&lt;System.String,CommonExtensionsAndTypesForNpgsqlFSharp/SqlValue&gt;&gt;&gt;&gt;&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="postgresNonQuery" signature="System.Threading.Tasks.Task`1&lt;System.Int32&gt; (System.String,System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.Tuple`2&lt;System.String,CommonExtensionsAndTypesForNpgsqlFSharp/SqlValue&gt;&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="postgresQuery" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;a&gt;&gt; (System.String,System.String,Microsoft.FSharp.Collections.FSharpList`1&lt;System.Tuple`2&lt;System.String,CommonExtensionsAndTypesForNpgsqlFSharp/SqlValue&gt;&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;CommonExtensionsAndTypesForNpgsqlFSharp/RowReader,a&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+                <line number="9" hits="0" branch="false" />
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CertificateUsage.Listener" line-rate="0" branch-rate="0" complexity="5.87">
+      <classes>
+        <class name="&lt;StartupCode$CertificateUsage-Listener&gt;.$CertificateUsage.Listener.Program" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/Program.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name=".cctor" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="&lt;StartupCode$CertificateUsage-Listener&gt;.$Worker/ExecuteAsync@19" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/Worker.fs" line-rate="0" branch-rate="0" complexity="21">
+          <methods>
+            <method name="MoveNext" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="21">
+              <lines>
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="30" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="29" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="30" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="23" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="29" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="&lt;StartupCode$CertificateUsage-Listener&gt;.$Worker/ExecuteAsync@24-1" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/Worker.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="System.Threading.Tasks.Task (EventStore.Client.PersistentSubscription,EventStore.Client.ResolvedEvent,System.Nullable`1&lt;System.Int32&gt;,System.Threading.CancellationToken)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="&lt;StartupCode$CertificateUsage-Listener&gt;.$Worker/ExecuteAsync@25-2" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/Worker.fs" line-rate="0" branch-rate="0" complexity="14">
+          <methods>
+            <method name="MoveNext" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="14">
+              <lines>
+                <line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="25" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="0" branch="false" />
+                <line number="33" hits="0" branch="true" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="23" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="25" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="32" hits="0" branch="false" />
+            <line number="33" hits="0" branch="true" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="23" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Listener.EventStore" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/EventStore.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="createSubscription" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.Unit&gt; (System.String,System.String,System.String)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="subscribe" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.Unit&gt; (System.String,System.String,System.String,Microsoft.FSharp.Core.FSharpFunc`2&lt;EventStore.Client.PersistentSubscription,Microsoft.FSharp.Core.FSharpFunc`2&lt;EventStore.Client.ResolvedEvent,Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Nullable`1&lt;System.Int32&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&gt;&gt;&gt;&gt;)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="43" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
+                <line number="45" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+            <line number="45" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Listener.EventStore/createSubscription@15" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/EventStore.fs" line-rate="0" branch-rate="0" complexity="27">
+          <methods>
+            <method name="MoveNext" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="27">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="51" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="50" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="0" branch="true" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="49" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="48" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="0" branch="false" />
+                <line number="29" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="45" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="42" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="36" hits="0" branch="true" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="41" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="51" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="50" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="22" hits="0" branch="true" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="49" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="48" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="25" hits="0" branch="false" />
+            <line number="29" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="45" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="30" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="42" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="36" hits="0" branch="true" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="41" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Listener.EventStore/subscribe@45" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/EventStore.fs" line-rate="0" branch-rate="0" complexity="14">
+          <methods>
+            <method name="MoveNext" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="14">
+              <lines>
+                <line number="46" hits="0" branch="false" />
+                <line number="47" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="58" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="0" branch="false" />
+                <line number="52" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="56" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="0" branch="false" />
+                <line number="54" hits="0" branch="false" />
+                <line number="55" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="46" hits="0" branch="false" />
+            <line number="47" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="58" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="51" hits="0" branch="false" />
+            <line number="52" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="56" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="53" hits="0" branch="false" />
+            <line number="54" hits="0" branch="false" />
+            <line number="55" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Listener.Program" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/Program.fs" line-rate="0" branch-rate="0" complexity="1.2">
+          <methods>
+            <method name="addApm" signature="Microsoft.AspNetCore.Builder.IApplicationBuilder (Microsoft.AspNetCore.Builder.IApplicationBuilder)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="13" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="8" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="addListenerService" signature="Microsoft.Extensions.DependencyInjection.IServiceCollection (Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="32" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="addSerilog" signature="Microsoft.AspNetCore.Builder.IApplicationBuilder (Microsoft.AspNetCore.Builder.IApplicationBuilder)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="main" signature="System.Int32 (System.String[])" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="46" hits="0" branch="false" />
+                <line number="48" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="useSerilog" signature="Microsoft.Extensions.Hosting.IHostBuilder (Microsoft.Extensions.Hosting.IHostBuilder)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="8" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Listener.Worker" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Listener/Worker.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name=".ctor" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="ExecuteAsync" signature="System.Threading.Tasks.Task (System.Threading.CancellationToken)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CertificateUsage.Api" line-rate="0.38" branch-rate="0.18" complexity="1.8">
+      <classes>
+        <class name="&lt;StartupCode$CertificateUsage-Api&gt;.$CertificateUsage.Api.Config" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Config.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name=".cctor" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="false" />
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="false" />
+            <line number="8" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="&lt;StartupCode$CertificateUsage-Api&gt;.$CertificateUsage.Api.Program" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Program.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name=".cctor" signature="System.Void ()" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="51" hits="0" branch="false" />
+                <line number="52" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="51" hits="0" branch="false" />
+            <line number="52" hits="0" branch="false" />
+            <line number="57" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Dependencies.BillingDataDependencies/BillingDataReaderIOModule" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Leaves.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="compose" signature="CertificateUsage.Api.Dependencies.BillingDataDependencies/BillingDataReaderIO (System.String)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Dependencies.Root" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Root.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="compose" signature="CertificateUsage.Api.Dependencies.Root/Root (CertificateUsage.Api.Dependencies.Trunk/Trunk)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Dependencies.Trunk" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Trunk.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="compose" signature="CertificateUsage.Api.Dependencies.Trunk/Trunk (Microsoft.Extensions.Configuration.IConfiguration)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="getConnectionString" signature="System.String (Microsoft.Extensions.Configuration.IConfiguration)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Dto/BillingReadModelDaoModule" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Dto.fs" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="toResponse" signature="CertificateUsage.Api.Dto/BillingApiResponse (CertificateUsage.Api.Dto/BillingReadModelDao)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="3" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="billingByCarrierAndMonthHandler" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt; (CertificateUsage.Api.Dependencies.Root/Root,System.String,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;,Microsoft.AspNetCore.Http.HttpContext)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="15" hits="3" branch="false" />
+              </lines>
+            </method>
+            <method name="usageRouter" signature="Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;&gt; (CertificateUsage.Api.Dependencies.Root/Root)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="3" branch="false" />
+            <line number="35" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/billingByCarrierAndMonthHandler@15" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0.8" complexity="18">
+          <methods>
+            <method name="MoveNext" signature="System.Void ()" line-rate="1" branch-rate="0.8" complexity="18">
+              <lines>
+                <line number="16" hits="3" branch="true" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="42" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="27" hits="3" branch="false" />
+                <line number="28" hits="3" branch="true" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="40" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="29" hits="2" branch="false" />
+                <line number="30" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="3" branch="true" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="42" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="27" hits="3" branch="false" />
+            <line number="28" hits="3" branch="true" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="40" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="29" hits="2" branch="false" />
+            <line number="30" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/billingByCarrierAndMonthHandler@18-1" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Control.FSharpAsync`1&lt;Microsoft.FSharp.Core.FSharpResult`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingApiResponse&gt;,System.String&gt;&gt; (Microsoft.FSharp.Core.Unit)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="18" hits="3" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/billingByCarrierAndMonthHandler@18-4" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Control.FSharpAsync`1&lt;Microsoft.FSharp.Core.FSharpResult`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingApiResponse&gt;,System.String&gt;&gt; (Microsoft.FSharp.Core.FSharpResult`2&lt;System.String,System.String&gt;)" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="19" hits="3" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/billingByCarrierAndMonthHandler@19-7" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Control.FSharpAsync`1&lt;Microsoft.FSharp.Core.FSharpResult`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingApiResponse&gt;,System.String&gt;&gt; (Microsoft.FSharp.Core.FSharpResult`2&lt;System.String,System.String&gt;)" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="20" hits="6" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="6" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/billingByCarrierAndMonthHandler@20-10" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Control.FSharpAsync`1&lt;Microsoft.FSharp.Core.FSharpResult`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingApiResponse&gt;,System.String&gt;&gt; (Microsoft.FSharp.Core.FSharpResult`2&lt;System.DateTime,System.String&gt;)" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/billingByCarrierAndMonthHandler@22-15" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Control.FSharpAsync`1&lt;Microsoft.FSharp.Core.FSharpResult`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingApiResponse&gt;,System.String&gt;&gt; (Microsoft.FSharp.Core.FSharpResult`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingReadModelDao&gt;,System.String&gt;)" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="4" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="4" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Endpoints.Usage/usageRouter@35" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Endpoints/Billing.fs" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;&gt; (System.String)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Program" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Program.fs" line-rate="0" branch-rate="0" complexity="1.4">
+          <methods>
+            <method name="addApm" signature="Microsoft.AspNetCore.Builder.IApplicationBuilder (Microsoft.AspNetCore.Builder.IApplicationBuilder)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="2" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="17" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="addSerilog" signature="Microsoft.AspNetCore.Builder.IApplicationBuilder (Microsoft.AspNetCore.Builder.IApplicationBuilder)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="0" branch="false" />
+                <line number="32" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
+                <line number="38" hits="0" branch="true" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="6" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="0" branch="false" />
+                <line number="41" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="addSwagger" signature="Microsoft.AspNetCore.Builder.IApplicationBuilder (Microsoft.AspNetCore.Builder.IApplicationBuilder)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="44" hits="0" branch="false" />
+                <line number="46" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="main" signature="System.Int32 (System.String[])" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="65" hits="0" branch="false" />
+                <line number="66" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="useSerilog" signature="Microsoft.Extensions.Hosting.IHostBuilder (Microsoft.Extensions.Hosting.IHostBuilder)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="2" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="17" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="38" hits="0" branch="true" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="6" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="39" hits="0" branch="false" />
+            <line number="41" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="65" hits="0" branch="false" />
+            <line number="66" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Program/addSwagger@48" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Program.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="System.Void (NSwag.AspNetCore.SwaggerUi3Settings)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="48" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="48" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Program/app@55-3" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Program.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="Microsoft.FSharp.Core.Unit (Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="55" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="55" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Repository.Billing" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/BillingReadRepository.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getBillingForCarrierByDate" signature="b (Microsoft.FSharp.Core.FSharpFunc`2&lt;System.String,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;System.Tuple`2&lt;System.String,CommonExtensionsAndTypesForNpgsqlFSharp/SqlValue&gt;&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Core.FSharpFunc`2&lt;a,CertificateUsage.Api.Dto/BillingReadModelDao&gt;,b&gt;&gt;&gt;,CertificateUsage.Api.Repository.Billing/BillingForCarrierByDateParameters)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="false" />
+                <line number="80" hits="0" branch="false" />
+                <line number="84" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0" branch="false" />
+            <line number="80" hits="0" branch="false" />
+            <line number="84" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Repository.Billing/mapper@66" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/BillingReadRepository.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="Invoke" signature="CertificateUsage.Api.Dto/BillingReadModelDao (CommonExtensionsAndTypesForNpgsqlFSharp/RowReader)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="66" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="66" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.Service.Billing" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/Service/Billing.fs" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="billingByCarrier" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Collections.FSharpList`1&lt;CertificateUsage.Api.Dto/BillingReadModelDao&gt;&gt; (CertificateUsage.Api.Dependencies.Root/Root,System.String,System.DateTime)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="3" branch="false" />
+                <line number="13" hits="3" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="3" branch="false" />
+            <line number="13" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.SharedKernel.DateTime" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/SharedKernel.fs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="tryParse" signature="Microsoft.FSharp.Core.FSharpResult`2&lt;System.DateTime,System.String&gt; (System.String)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="12" hits="4" branch="true" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="59" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="13" hits="3" branch="false" />
+                <line number="14" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="4" branch="true" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="59" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="13" hits="3" branch="false" />
+            <line number="14" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.SharedKernel.Giraffe/Successful" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/SharedKernel.fs" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="okJson" signature="Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;&gt; (t)" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="CertificateUsage.Api.WebApp" filename="/Users/eonno/work/certificate-usage/CertificateUsage.Api/WebApp.fs" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="appRouter" signature="Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;,Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;&gt; (CertificateUsage.Api.Dependencies.Root/Root)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="healthHandler" signature="System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt; (Microsoft.FSharp.Core.FSharpFunc`2&lt;Microsoft.AspNetCore.Http.HttpContext,System.Threading.Tasks.Task`1&lt;Microsoft.FSharp.Core.FSharpOption`1&lt;Microsoft.AspNetCore.Http.HttpContext&gt;&gt;&gt;,Microsoft.AspNetCore.Http.HttpContext)" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

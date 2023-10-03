@@ -1,0 +1,108 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+
+        <Compile Include="Stubs\CoveredCertificate.fs" />
+        <Compile Include="Stubs\ExcludedCertificate.fs" />
+        <Compile Include="Stubs\Event.fs" />
+        <Compile Include="Stubs\MemberEnrollment.fs" />
+        <Compile Include="Stubs\MemberReinstatementConfirmed.fs" />
+        <Compile Include="Stubs\MemberCancelledDto.fs" />
+        <Compile Include="Stubs\MemberTerminatedDto.fs" />
+        <Compile Include="Stubs\MemberEnrolledSnapshotDto.fs" />
+        <Compile Include="Stubs\Task.fs" />
+        <Compile Include="Stubs\MemberTaxProvinceUpdatedDto.fs" />
+        <Compile Include="Stubs\MemberDependentAddedDto.fs" />
+        <Compile Include="Stubs\MemberSpouseAddedDto.fs" />
+        <Compile Include="Stubs\SpouseTerminatedDto.fs" />
+        <Compile Include="Stubs\DependentTerminatedDto.fs" />
+        <Compile Include="Stubs\MemberCobUpdatedDto.fs" />
+        <Compile Include="Stubs\SpouseCobUpdatedDto.fs" />
+        <Compile Include="Stubs\DependentCobUpdatedDto.fs" />
+        <Compile Include="Stubs\SpouseCohabUpdatedDto.fs" />
+        <Compile Include="Stubs\DependentPostSecondaryEducationUpdatedDto.fs" />
+        <Compile Include="Stubs\DependentDisabilityUpdatedDto.fs" />
+        <Compile Include="Stubs\MemberEmploymentUpdatedDto.fs" />
+        <Compile Include="Stubs\MemberIncomeUpdatedDto.fs" />
+        <Compile Include="Stubs\CarrierRateModifiedDto.fs" />
+        <Compile Include="Stubs\RateUpdateDataDao.fs" />
+        <Compile Include="Stubs\CarrierRateModificationDomainModel.fs" />
+        <Compile Include="Stubs\MetadataDto.fs" />
+        <Compile Include="Stubs\CarrierRateModifiedEvent.fs" />
+        <Compile Include="Stubs\PlanSelection.fs" />
+        <Compile Include="Stubs\CertificateRecordDao.fs" />
+        <Compile Include="Stubs\Certificate.fs" />
+        <Compile Include="Stubs\UsagePreviewDao.fs" />
+        <Compile Include="Stubs\UsageLineDao.fs" />
+        <Compile Include="Stubs\RetroactiveUpdate.fs" />
+        <Compile Include="Stubs\CertificateUsage.fs" />
+        <Compile Include="Stubs\Usage.fs" />
+        <Compile Include="Stubs\RetroactiveCertificateUsageTransitionDao.fs" />
+        <Compile Include="Stubs\RetroactiveCertificateUsageUpdateDao.fs" />
+        <Compile Include="Stubs\MemberRateChanged.fs" />
+        <Compile Include="Spy.fs" />
+        <Compile Include="Mocks.fs" />
+        <Compile Include="Dto\Events\Dto.Tests.fs" />
+        <Compile Include="Repository.Tests.fs" />
+        <Compile Include="Errors.Tests.fs" />
+        <Compile Include="ToDomain.Tests.fs" />
+        <Compile Include="Domain.Tests.fs" />
+        <Compile Include="ToDao.Tests.fs" />
+        <Compile Include="Acceptance.Tests.fs" />
+        <Compile Include="ToDto.Tests.fs" />
+        <Compile Include="Worker.Tests.fs" />
+        <Compile Include="OnEvent.Tests.fs" />
+        <Compile Include="Api\Endpoint.Tests.fs" />
+        <Compile Include="Api\SharedKernel.Tests.fs" />
+        <Compile Include="Api\Dto.Tests.fs" />
+        <Compile Include="Api\Service.Tests.fs" />
+        <Compile Include="Api\Service\CloseOutMonth.Tests.fs" />
+        <Compile Include="Api\Service\PreviewUsage.Tests.fs" />
+        <Compile Include="Api\Service\CloseOutCorrections.Tests.fs" />
+        <Compile Include="Api\UsageCommandRepository.Tests.fs" />
+        <Compile Include="Api\UsageReadRepositoryTests.fs" />
+        <Compile Include="Api\Dao.Tests.fs" />
+        <Compile Include="RateListener\OnEvent.Tests.fs" />
+        <Compile Include="RateListener\ToDto.Tests.fs" />
+        <Compile Include="MemberListener\CarrierAliasMappingService.Tests.fs" />
+        <Compile Include="Dao.Tests.fs" />
+        <Compile Include="CertificateStateWorkflow.Tests.fs" />
+        <Compile Include="RetroactiveCertificateUpdateWorkflow.Tests.fs" />
+        <Compile Include="JsonDeserialization.Tests.fs" />
+        <Compile Include="Tuple.Tests.fs" />
+        <Compile Include="RetroactiveCertificateUpdateService.Tests.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Expecto" Version="9.0.4" />
+        <PackageReference Include="Foq" Version="1.8.0" />
+        <PackageReference Include="FsUnit" Version="5.3.0" />
+        <PackageReference Include="JunitXml.TestLogger" Version="3.0.134" />
+        <PackageReference Include="NSubstitute" Version="5.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+        <PackageReference Include="Serilog.Sinks.TestCorrelator" Version="3.2.0" />
+        <PackageReference Include="xunit" Version="2.4.2" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.collector" Version="3.1.2">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CertificateUsage\CertificateUsage.fsproj" />
+        <ProjectReference Include="..\CertificateUsage.Listener\CertificateUsage.Listener.fsproj" />
+        <ProjectReference Include="..\CertificateUsage.Api\CertificateUsage.Api.fsproj" />
+    </ItemGroup>
+
+</Project>
