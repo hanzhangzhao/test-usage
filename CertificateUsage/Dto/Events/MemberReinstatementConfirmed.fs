@@ -1,0 +1,5 @@
+module CertificateUsage.Dto.Events.MemberReinstatementConfirmed
+
+open CertificateUsage.Dto.Events.MemberEnrolled
+
+type MemberReinstatementConfirmedDto = MemberEnrollmentDto
