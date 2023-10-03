@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: certificate-usage
+  namespace: certificate-usage
+spec:
+  template:
+    spec:
+      containers:
+        - name: certificate-usage
+          resources:
+            limits:
+              cpu: "512m"
+              memory: "512Mi"
+            requests:
+              cpu: "256m"
+              memory: "256Mi"
+          securityContext:
+            allowPrivilegeEscalation: false

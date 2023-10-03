@@ -1,0 +1,94 @@
+{
+  "channels": {
+    "members/MemberEnrollmentConfirmed": {
+      "publish": {
+        "message": { "name": "MemberEnrollmentConfirmed" }
+      }
+    },
+    "members/MemberReinstatementConfirmed": {
+      "publish": {
+        "message": { "name": "MemberReinstatementConfirmed" }
+      }
+    },
+    "members/MemberBenefitEnded": {
+      "publish": {
+        "message": { "name": "MemberBenefitEnded" }
+      }
+    },
+    "members/MemberBenefitCancelled": {
+      "publish": {
+        "message": { "name": "MemberBenefitCancelled" }
+      }
+    },
+    "members/MemberEnrolledSnapshot": {
+      "publish": {
+        "message": { "name": "MemberEnrolledSnapshot" }
+      }
+    },
+    "members/EnrolledMemberTaxProvinceUpdated": {
+      "publish": {
+        "message": { "name": "EnrolledMemberTaxProvinceUpdated" }
+      }
+    },
+    "members/MemberSpouseAdded": {
+      "publish": {
+        "message": { "name": "MemberSpouseAdded" }
+      }
+    },
+    "members/MemberDependentAdded": {
+      "publish": {
+        "message": { "name": "MemberDependentAdded" }
+      }
+    },
+    "members/EnrolledDependentRemoved": {
+      "publish": {
+        "message": { "name": "EnrolledDependentRemoved" }
+      }
+    },
+    "members/EnrolledSpouseRemoved": {
+      "publish": {
+        "message": { "name": "EnrolledSpouseRemoved" }
+      }
+    },
+    "members/MemberCobUpdated": {
+      "publish": {
+        "message": { "name": "MemberCobUpdated" }
+      }
+    },
+    "members/DependentCobUpdated": {
+      "publish": {
+        "message": { "name": "DependentCobUpdated" }
+      }
+    },
+    "members/SpouseCobUpdated": {
+      "publish": {
+        "message": { "name": "SpouseCobUpdated" }
+      }
+    },
+    "members/MemberSpouseCohabUpdated": {
+      "publish": {
+        "message": { "name": "MemberSpouseCohabUpdated" }
+      }
+    },
+    "members/EnrolledDependentDisabilityUpdated": {
+      "publish": {
+        "message": { "name": "EnrolledDependentDisabilityUpdated" }
+      }
+    },
+    "members/EnrolledDependentPostSecondaryEducationUpdated": {
+      "publish": {
+        "message": { "name": "EnrolledDependentPostSecondaryEducationUpdated" }
+      }
+    },
+    "members/EnrolledMemberIncomeUpdated": {
+      "publish": {
+        "message": { "name": "EnrolledMemberIncomeUpdated" }
+      }
+    },
+    "members/EnrolledMemberEmploymentUpdated": {
+      "publish": {
+        "message": { "name": "EnrolledMemberEmploymentUpdated" }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "CertificateUsage.Listener": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Local"
+      }
+    }
+  }
+}

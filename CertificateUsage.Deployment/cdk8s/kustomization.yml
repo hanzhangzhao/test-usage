@@ -1,0 +1,11 @@
+# DO NOT CHANGE THIS FILE
+# This file is only here to include the cdk8s built deployment manifest when
+# applying kustomize to the cluster.  Make changes to kustomizable in the files
+# below the ../kustomize folder.
+resources:
+  - dist/manifest-template.k8s.yaml
+commonLabels:
+  slackChannel: 'project-erl-overhaul'
+  team: 'brokerage'
+  appName: 'certificate-usage'
+  domain: 'brokerage'

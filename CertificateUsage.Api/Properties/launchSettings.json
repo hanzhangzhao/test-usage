@@ -1,0 +1,16 @@
+{
+    "profiles": {
+      "CertificateUsageService": {
+        "commandName": "Project",
+        "dotnetRunMessages": true,
+        "launchBrowser": false,
+        "launchUrl": "swagger",
+        "applicationUrl": "http://localhost:5154",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Local",
+          "ASPNETCORE_URLS" : "http://+:5154",
+          "SERVER__URL" : "http://+:5154"
+        }
+      }
+    }
+  }

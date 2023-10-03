@@ -1,0 +1,19 @@
+{
+  "docker": {
+    "registry": "registry.gitlab.com/sterlingcapitalbrokers"
+  },
+  "migration": {
+    "imageLabel": "latest"
+  },
+  "listener": {
+    "imageLabel": "latest"
+  },
+  "api": {
+    "imageLabel": "latest"
+  },
+  "projections": {
+    "imageLabel": "latest"
+  },
+  "apm": { "secretToken": "some key" },
+  "gitlabK8sRegToken": "some key"
+}

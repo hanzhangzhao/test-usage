@@ -1,0 +1,16 @@
+{
+  "migration": {
+    "imageLabel": "IMAGE_LABEL"
+  },
+  "listener": {
+    "imageLabel": "IMAGE_LABEL"
+  },
+  "api": {
+    "imageLabel": "IMAGE_LABEL"
+  },
+  "projections": {
+    "imageLabel": "IMAGE_LABEL"
+  },
+  "apm": { "secretToken": "APM_SECRET_TOKEN" },
+  "gitlabK8sRegToken" : "GITLAB_K8S_REG_TOKEN"
+}

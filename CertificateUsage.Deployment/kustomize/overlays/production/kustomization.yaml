@@ -1,0 +1,31 @@
+namespace: certificate-usage
+
+resources:
+  - ../../base
+
+commonAnnotations:
+  managed-by: kustomize
+
+commonLabels:
+  appName: "certificate-usage"
+  domain: "brokerage"
+  environment: production
+  slackChannel: "project-erl-overhaul"
+  team: "brokerage"
+
+configMapGenerator:
+  - name: app-config
+    envs:
+    - app-config.env
+    options:
+      disableNameSuffixHash: true
+
+secretGenerator:
+  - name: app-secrets
+    envs:
+    - app-secrets.env
+    options:
+      disableNameSuffixHash: true
+
+patchesStrategicMerge:
+  - app-deployment.yaml

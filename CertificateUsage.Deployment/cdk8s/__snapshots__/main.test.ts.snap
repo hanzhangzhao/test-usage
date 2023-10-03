@@ -1,0 +1,695 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Kubernetes Deployment Kubernetes manifest 1`] = `
+Array [
+  Object {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": Object {
+      "labels": Object {
+        "istio-injection": "disabled",
+      },
+      "name": "certificate-usage",
+      "namespace": "certificate-usage",
+    },
+  },
+  Object {
+    "apiVersion": "v1",
+    "kind": "ServiceAccount",
+    "metadata": Object {
+      "name": "serviceaccount",
+      "namespace": "certificate-usage",
+    },
+  },
+  Object {
+    "apiVersion": "v1",
+    "kind": "Secret",
+    "metadata": Object {
+      "name": "regcred",
+      "namespace": "certificate-usage",
+    },
+    "stringData": Object {
+      ".dockerconfigjson": "{\\"auths\\":{\\"registry.gitlab.com\\":{\\"auth\\":\\"Z2l0bGFiLWNpOnVuZGVmaW5lZA==\\"}}}",
+    },
+    "type": "kubernetes.io/dockerconfigjson",
+  },
+  Object {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": Object {
+      "labels": Object {
+        "app": "test-chart-certificate-usage-member-listener-c8ec7b87",
+      },
+      "name": "certificate-usage-member-listener",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "selector": Object {
+        "matchLabels": Object {
+          "app": "test-chart-certificate-usage-member-listener-c8ec7b87",
+        },
+      },
+      "template": Object {
+        "metadata": Object {
+          "labels": Object {
+            "app": "test-chart-certificate-usage-member-listener-c8ec7b87",
+          },
+          "name": "certificate-usage-member-listener",
+        },
+        "spec": Object {
+          "containers": Array [
+            Object {
+              "args": Array [],
+              "env": Array [
+                Object {
+                  "name": "DB__HOST",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "endpoint",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__USERNAME",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "username",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__PASSWORD",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "password",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__PORT",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "port",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__CONNECTIONSTRING",
+                  "value": "User ID=$(DB__USERNAME);Password=$(DB__PASSWORD);Host=$(DB__HOST);Port=$(DB__PORT);",
+                },
+                Object {
+                  "name": "ELASTICAPM__SECRETTOKEN",
+                  "value": "some key",
+                },
+                Object {
+                  "name": "ASPNETCORE_URLS",
+                  "value": "http://0.0.0.0:8080",
+                },
+              ],
+              "envFrom": Array [
+                Object {
+                  "configMapRef": Object {
+                    "name": "app-config",
+                  },
+                },
+              ],
+              "image": "registry.gitlab.com/sterlingcapitalbrokers/certificate-usage:latest",
+              "imagePullPolicy": "Always",
+              "livenessProbe": Object {
+                "exec": Object {
+                  "command": Array [
+                    "/bin/sh",
+                    "-c",
+                    "./health.sh",
+                  ],
+                },
+                "initialDelaySeconds": 10,
+                "periodSeconds": 5,
+                "timeoutSeconds": 5,
+              },
+              "name": "certificate-usage-member-listener",
+              "readinessProbe": Object {
+                "exec": Object {
+                  "command": Array [
+                    "/bin/sh",
+                    "-c",
+                    "./health.sh",
+                  ],
+                },
+                "failureThreshold": 6,
+                "initialDelaySeconds": 10,
+                "periodSeconds": 5,
+                "timeoutSeconds": 5,
+              },
+              "resources": Object {
+                "limits": Object {
+                  "cpu": 1,
+                  "memory": "256Mi",
+                },
+                "requests": Object {
+                  "cpu": 1,
+                  "memory": "128Mi",
+                },
+              },
+              "securityContext": Object {
+                "allowPrivilegeEscalation": false,
+              },
+            },
+          ],
+          "imagePullSecrets": Array [
+            Object {
+              "name": "regcred",
+            },
+          ],
+          "serviceAccountName": "serviceaccount",
+        },
+      },
+    },
+  },
+  Object {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": Object {
+      "labels": Object {
+        "app": "test-chart-certificate-usage-c833da23",
+      },
+      "name": "certificate-usage",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "selector": Object {
+        "matchLabels": Object {
+          "app": "test-chart-certificate-usage-c833da23",
+        },
+      },
+      "template": Object {
+        "metadata": Object {
+          "labels": Object {
+            "app": "test-chart-certificate-usage-c833da23",
+          },
+          "name": "certificate-usage",
+        },
+        "spec": Object {
+          "containers": Array [
+            Object {
+              "command": Array [],
+              "env": Array [
+                Object {
+                  "name": "DB__HOST",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "endpoint",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__USERNAME",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "username",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__PASSWORD",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "password",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__PORT",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "port",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__CONNECTIONSTRING",
+                  "value": "User ID=$(DB__USERNAME);Password=$(DB__PASSWORD);Host=$(DB__HOST);Port=$(DB__PORT);",
+                },
+                Object {
+                  "name": "ELASTICAPM__SECRETTOKEN",
+                  "value": "some key",
+                },
+                Object {
+                  "name": "ASPNETCORE_URLS",
+                  "value": "http://0.0.0.0:8080",
+                },
+              ],
+              "envFrom": Array [
+                Object {
+                  "configMapRef": Object {
+                    "name": "app-config",
+                  },
+                },
+              ],
+              "image": "registry.gitlab.com/sterlingcapitalbrokers/certificate-usage/api:latest",
+              "imagePullPolicy": "Always",
+              "livenessProbe": Object {
+                "httpGet": Object {
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "User-Agent",
+                      "value": "k8s liveness probe",
+                    },
+                  ],
+                  "path": "/health",
+                  "port": 8080,
+                  "scheme": "HTTP",
+                },
+                "initialDelaySeconds": 10,
+                "periodSeconds": 5,
+                "timeoutSeconds": 5,
+              },
+              "name": "certificate-usage",
+              "ports": Array [
+                Object {
+                  "containerPort": 8080,
+                },
+              ],
+              "readinessProbe": Object {
+                "failureThreshold": 6,
+                "httpGet": Object {
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "User-Agent",
+                      "value": "k8s readiness probe",
+                    },
+                  ],
+                  "path": "/health",
+                  "port": 8080,
+                  "scheme": "HTTP",
+                },
+                "initialDelaySeconds": 10,
+                "periodSeconds": 5,
+                "timeoutSeconds": 5,
+              },
+              "resources": Object {
+                "limits": Object {
+                  "cpu": 1,
+                  "memory": "256Mi",
+                },
+                "requests": Object {
+                  "cpu": 1,
+                  "memory": "128Mi",
+                },
+              },
+              "securityContext": Object {
+                "allowPrivilegeEscalation": false,
+              },
+            },
+          ],
+          "imagePullSecrets": Array [
+            Object {
+              "name": "regcred",
+            },
+          ],
+          "serviceAccountName": "serviceaccount",
+        },
+      },
+    },
+  },
+  Object {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": Object {
+      "name": "certificate-usage",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "ports": Array [
+        Object {
+          "name": "8080-8080",
+          "port": 8080,
+          "targetPort": 8080,
+        },
+      ],
+      "selector": Object {
+        "app": "test-chart-certificate-usage-c833da23",
+      },
+    },
+  },
+  Object {
+    "apiVersion": "autoscaling/v2beta2",
+    "kind": "HorizontalPodAutoscaler",
+    "metadata": Object {
+      "name": "certificate-usage",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "maxReplicas": 2,
+      "metrics": Array [
+        Object {
+          "resource": Object {
+            "name": "cpu",
+            "target": Object {
+              "averageUtilization": 50,
+              "type": "Utilization",
+            },
+          },
+          "type": "Resource",
+        },
+      ],
+      "minReplicas": 1,
+      "scaleTargetRef": Object {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "certificate-usage",
+      },
+    },
+  },
+  Object {
+    "apiVersion": "networking.istio.io/v1alpha3",
+    "kind": "VirtualService",
+    "metadata": Object {
+      "name": "test-chart-certificate-usage-vs-c8f5ca2c",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "exportTo": Array [
+        "*",
+      ],
+      "hosts": Array [
+        "certificate-usage.certificate-usage.svc.cluster.local",
+      ],
+      "http": Array [
+        Object {
+          "route": Array [
+            Object {
+              "destination": Object {
+                "host": "certificate-usage.certificate-usage.svc.cluster.local",
+              },
+            },
+          ],
+        },
+      ],
+    },
+  },
+  Object {
+    "apiVersion": "networking.istio.io/v1alpha3",
+    "kind": "DestinationRule",
+    "metadata": Object {
+      "name": "test-chart-certificate-usage-dr-c87beb1c",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "exportTo": Array [
+        "*",
+      ],
+      "host": "certificate-usage.certificate-usage.svc.cluster.local",
+      "trafficPolicy": Object {
+        "loadBalancer": Object {
+          "simple": "LEAST_CONN",
+        },
+      },
+    },
+  },
+  Object {
+    "apiVersion": "flagger.app/v1beta1",
+    "kind": "Canary",
+    "metadata": Object {
+      "name": "certificate-usage",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "analysis": Object {
+        "interval": "30s",
+        "iterations": 5,
+        "threshold": 4,
+      },
+      "autoscalerRef": Object {
+        "apiVersion": "autoscaling/v2beta2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "certificate-usage",
+      },
+      "service": Object {
+        "canary": Object {
+          "annotations": Object {
+            "konghq.com/override": "certificate-usage",
+          },
+        },
+        "port": 8080,
+        "portName": "http",
+        "primary": Object {
+          "annotations": Object {
+            "konghq.com/override": "certificate-usage",
+          },
+        },
+      },
+      "targetRef": Object {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "name": "certificate-usage",
+      },
+    },
+  },
+  Object {
+    "apiVersion": "ec2.aws.crossplane.io/v1beta1",
+    "kind": "SecurityGroup",
+    "metadata": Object {
+      "name": "certificate-usage-security-group",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "forProvider": Object {
+        "description": "Enable rds access",
+        "egress": Array [
+          Object {
+            "fromPort": 0,
+            "ipProtocol": "tcp",
+            "ipRanges": Array [
+              Object {
+                "cidrIp": "0.0.0.0/0",
+              },
+            ],
+            "toPort": 0,
+          },
+        ],
+        "groupName": "database-security-group",
+        "ingress": Array [
+          Object {
+            "fromPort": 5432,
+            "ipProtocol": "tcp",
+            "ipRanges": Array [
+              Object {
+                "cidrIp": "172.31.0.0/16",
+              },
+            ],
+            "toPort": 5432,
+          },
+        ],
+        "region": "ca-central-1",
+        "vpcId": "vpc-000468bf7dd41a01d",
+      },
+    },
+  },
+  Object {
+    "apiVersion": "database.aws.crossplane.io/v1beta1",
+    "kind": "DBSubnetGroup",
+    "metadata": Object {
+      "name": "certificate-usage-db-subnet-group",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "forProvider": Object {
+        "description": "subnet group for certificate-usage",
+        "region": "ca-central-1",
+        "subnetIds": Array [
+          "subnet-08e840f1c75bc8bcd",
+          "subnet-0c88e18012e8ac7b6",
+          "subnet-0064b60b74121308a",
+        ],
+      },
+    },
+  },
+  Object {
+    "apiVersion": "database.aws.crossplane.io/v1beta1",
+    "kind": "RDSInstance",
+    "metadata": Object {
+      "name": "certificate-usage-db",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "forProvider": Object {
+        "allocatedStorage": 10,
+        "backupRetentionPeriod": 1,
+        "dbInstanceClass": "db.t4g.micro",
+        "dbName": "certificate_usage_service",
+        "dbSubnetGroupNameRef": Object {
+          "name": "certificate-usage-db-subnet-group",
+        },
+        "enablePerformanceInsights": false,
+        "engine": "postgres",
+        "engineVersion": "15.3",
+        "masterUsername": "certificate_usage_service",
+        "multiAZ": false,
+        "region": "ca-central-1",
+        "skipFinalSnapshotBeforeDeletion": true,
+        "storageEncrypted": true,
+        "tags": Array [
+          Object {
+            "key": "app",
+            "value": "certificate-usage",
+          },
+          Object {
+            "key": "namespace",
+            "value": "certificate-usage",
+          },
+          Object {
+            "key": "team",
+            "value": "brokerage",
+          },
+        ],
+        "vpcSecurityGroupIDRefs": Array [
+          Object {
+            "name": "certificate-usage-security-group",
+          },
+        ],
+      },
+      "writeConnectionSecretToRef": Object {
+        "name": "db-cred",
+        "namespace": "certificate-usage",
+      },
+    },
+  },
+  Object {
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": Object {
+      "name": "certificate-usage-db-migration",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "template": Object {
+        "spec": Object {
+          "containers": Array [
+            Object {
+              "env": Array [
+                Object {
+                  "name": "DB__HOST",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "endpoint",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__USERNAME",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "username",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__PASSWORD",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "password",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__PORT",
+                  "valueFrom": Object {
+                    "secretKeyRef": Object {
+                      "key": "port",
+                      "name": "db-cred",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB__CONNECTIONSTRING",
+                  "value": "User ID=$(DB__USERNAME);Password=$(DB__PASSWORD);Host=$(DB__HOST);Port=$(DB__PORT);",
+                },
+                Object {
+                  "name": "ELASTICAPM__SECRETTOKEN",
+                  "value": "some key",
+                },
+              ],
+              "image": "registry.gitlab.com/sterlingcapitalbrokers/certificate-usage/migrations:latest",
+              "name": "certificate-usage-db-migration",
+              "resources": Object {
+                "limits": Object {
+                  "cpu": "200m",
+                  "memory": "256Mi",
+                },
+                "requests": Object {
+                  "cpu": "100m",
+                  "memory": "128Mi",
+                },
+              },
+              "securityContext": Object {
+                "allowPrivilegeEscalation": false,
+              },
+            },
+          ],
+          "imagePullSecrets": Array [
+            Object {
+              "name": "regcred",
+            },
+          ],
+          "restartPolicy": "Never",
+        },
+      },
+      "ttlSecondsAfterFinished": 100,
+    },
+  },
+  Object {
+    "apiVersion": "s3.aws.crossplane.io/v1beta1",
+    "kind": "Bucket",
+    "metadata": Object {
+      "annotations": Object {
+        "crossplane.io/external-name": "monthly-billing-development",
+      },
+      "name": "monthly-billing-bucket",
+      "namespace": "certificate-usage",
+    },
+    "spec": Object {
+      "forProvider": Object {
+        "locationConstraint": "ca-central-1",
+        "objectOwnership": "BucketOwnerEnforced",
+        "paymentConfiguration": Object {
+          "payer": "BucketOwner",
+        },
+        "publicAccessBlockConfiguration": Object {
+          "blockPublicAcls": true,
+          "blockPublicPolicy": true,
+          "ignorePublicAcls": true,
+          "restrictPublicBuckets": true,
+        },
+        "serverSideEncryptionConfiguration": Object {
+          "rules": Array [
+            Object {
+              "applyServerSideEncryptionByDefault": Object {
+                "sseAlgorithm": "AES256",
+              },
+            },
+          ],
+        },
+        "versioningConfiguration": Object {
+          "status": "Enabled",
+        },
+      },
+      "writeConnectionSecretToRef": Object {
+        "name": "bucket-access",
+        "namespace": "certificate-usage",
+      },
+    },
+  },
+]
+`;

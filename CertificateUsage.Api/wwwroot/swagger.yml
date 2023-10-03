@@ -1,0 +1,246 @@
+openapi: 3.0.3
+info:
+  title: CertificateUsage Service
+  description: Provide certificate usage
+  version: v0
+components:
+  schemas:
+    Billing:
+      type: object
+      properties:
+        usageType:
+          type: string
+          enum:
+            - charge
+            - reversal
+            - correction
+        clientName:
+          type: string
+          format: string
+        carrierCode:
+          type: string
+          format: string
+        certificateNumber:
+          type: string
+          format: string
+        policyNumber:
+          type: string
+          format: string
+        productLine:
+          type: string
+          format: string
+        option:
+          type: string
+          format: string
+        volume:
+          type: number
+        lives:
+          type: number
+        taxRate:
+          type: number
+        taxProvince:
+          type: string
+        year:
+          type: integer
+        month:
+          type: integer
+        carrierRate:
+          type: number
+        clientRate:
+          type: number
+        division:
+          type: string
+          format: string
+        coverage:
+          type: string
+          format: string
+    Close:
+      type: object
+      properties:
+        status:
+          type: string
+          format: string
+    Preview:
+      type: object
+      properties:
+        certificateNumber:
+          type: string
+          format: string
+        carrierName:
+          type: string
+          format: string
+        clientName:
+          type: string
+          format: string
+        policyNumber:
+          type: string
+          format: string
+        scbPolicyNumber:
+          type: string
+          format: string
+        startDate:
+          type: string
+        endDate:
+          type: string
+        division:
+          type: string
+          format: string
+        productLine:
+          type: string
+          format: string
+        productLineGroup:
+          type: string
+          format: string
+        coverage:
+          type: string
+          format: string
+        option:
+          type: string
+          format: string
+        ratePer:
+          type: number
+        volumeAmount:
+          type: number
+        volumeUnit:
+          type: string
+          format: string
+        carrierRate:
+          type: number
+        taxRate:
+          type: number
+        taxProvince:
+          type: string
+          format: string
+paths:
+  /health:
+    get:
+      summary: Health Check
+      tags:
+        - Health
+      responses:
+        default:
+          description: Unexpected Error Occured
+          content:
+            text/plain:
+              schema:
+                type: string
+        '200':
+          description: Application health
+          content:
+            text/plain:
+              schema:
+                type: string
+  /v0/usage/carrier/{carrierName}/billing:
+    get:
+      tags:
+        - CertificateUsage
+      operationId: CertificateUsage
+      summary: Ingest
+      parameters:
+        - in: path
+          name: carrierName
+          schema:
+            type: string
+          required: true
+          description: Name of the scb carrier
+        - in: query
+          name: year
+          schema:
+            type: number
+          required: true
+          description: year the billing period starts
+        - in: query
+          name: month
+          schema:
+            type: number
+          required: true
+          description: month the billing period starts
+        - in: query
+          name: day
+          schema:
+            type: number
+          required: true
+          description: day the billing period starts
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Billing'
+        '404':
+          description: The usage for the carrier in the year-month has not yet been finalized and cannot be found
+          content:
+            application/json:
+              schema:
+                type: string
+  /v0/usage/close/carrier/{carrierName}/year/{year}/month/{month}/day/{day}:
+    post:
+      tags:
+        - CertificateUsage
+      operationId: CertificateUsage
+      summary: Finalize the usage (close the books) for the carrier-year-month
+      parameters:
+        - in: path
+          name: carrierName
+          schema:
+            type: string
+          required: true
+          description: Finalize the usage (close the books) for this carrier
+        - in: path
+          name: year
+          schema:
+            type: integer
+            minimum: 1000
+            maximum: 9999
+          required: true
+          description: Finalize the usage (close the books) on this year
+        - in: path
+          name: month
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 10
+          required: true
+          description: Finalize the usage (close the books) on this month
+        - in: path
+          name: day
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 31
+          required: true
+          description: Finalize the usage (close the books) on this month
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Close'
+        '409':
+          description: The usage for year-month has already been closed for the carrier
+          content:
+            application/json:
+              schema:
+                type: string
+  /v0/usage/preview/carrier/{carrierName}:
+    get:
+      tags:
+        - CertificateUsage
+      operationId: CertificateUsage
+      summary: Preview the current state of the usage
+      parameters:
+        - in: path
+          name: carrierName
+          schema:
+            type: string
+          required: true
+          description: Preview the books for this carrier
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Preview'

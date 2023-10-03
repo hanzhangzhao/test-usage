@@ -1,0 +1,36 @@
+{
+  "asyncapi": "2.6.0",
+  "id": "https://gitlab.com/sterlingcapitalbrokers/certificate-usage",
+  "tags": [],
+  "defaultContentType": "json",
+  "info": {
+    "title": "Certificate Usage",
+    "version": "1.0.0",
+    "description": "Tracks the usage for each certificate within SCBConnect.",
+    "license": {
+      "name": "UNLICENSED"
+    },
+    "contact": {
+      "name": "SCB Engineering",
+      "url": "https://sterlingcapital.slack.com/archives/C04T9HR8BGU",
+      "email": "technology@sterlingcapitalbrokers.com"
+    }
+  },
+  "servers": {
+    "production": {
+      "url": "http://es.www.scbconnect.cloud",
+      "protocol": "http",
+      "protocolVersion": "2.0"
+    },
+    "staging": {
+      "url": "http://es.staging.scbconnect.cloud",
+      "protocol": "http",
+      "protocolVersion": "2.0"
+    },
+    "development": {
+      "url": "http://es.development.scbconnect.cloud",
+      "protocol": "http",
+      "protocolVersion": "2.0"
+    }
+  }
+}
