@@ -1,0 +1,36 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0.306-alpine3.18-amd64 AS build
+WORKDIR /source
+
+# copy csproj/fsproj and restore as distinct layers
+COPY CertificateUsage.sln .
+COPY CertificateUsage/. ./CertificateUsage/
+COPY CertificateUsage.Listener/. ./CertificateUsage.Listener/
+COPY CertificateUsage.Api/. ./CertificateUsage.Api/
+COPY CertificateUsage.Migrations/. ./CertificateUsage.Migrations/
+COPY CertificateUsage.Tests/CertificateUsage.Tests.fsproj ./CertificateUsage.Tests/
+COPY CertificateUsage.Tests.Behaviour/. ./CertificateUsage.Tests.Behaviour/
+
+
+RUN dotnet restore --runtime alpine-x64
+
+RUN dotnet publish "CertificateUsage.Api/CertificateUsage.Api.fsproj" -c Release -o /app -r alpine-x64 --self-contained false --no-restore
+
+COPY CertificateUsage.Api/appsettings.* /app/
+COPY CertificateUsage.Api/wwwroot/. /app/wwwroot/
+
+# final stage/image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0.9-alpine3.18-amd64
+
+RUN apk upgrade libssl3 libcrypto3 && \
+    addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://*:8080
+
+WORKDIR /app
+COPY --from=build /app .
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 \
+  DOTNET_RUNNING_IN_CONTAINER=true
+
+CMD ["dotnet", "CertificateUsage.Api.dll"]

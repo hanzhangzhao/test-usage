@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="Dto\Events\PolicyNumber.fs" />
+      <Compile Include="Dto\Events\Certificate.fs" />
+      <Compile Include="Dto\Events\ProductConfiguration.fs" />
+      <Compile Include="Dto\Events\BenefitPeriod.fs" />
+      <Compile Include="Dto\Events\Employment.fs" />
+      <Compile Include="Dto\Events\Income.fs" />
+      <Compile Include="Dto\Events\MemberAddress.fs" />
+      <Compile Include="Dto\Events\Update.fs" />
+      <Compile Include="Dto\Events\EligiblityPeriod.fs" />
+      <Compile Include="Dto\Events\PostSecondaryEducationPeriod.fs" />
+      <Compile Include="Dto\Events\CoverageCoordinationDto.fs" />
+      <Compile Include="Dto\Events\Dependent.fs" />
+      <Compile Include="Dto\Events\Spouse.fs" />
+      <Compile Include="Dto\Events\DependentAdded.fs" />
+      <Compile Include="Dto\Events\MemberEnrolled.fs" />
+      <Compile Include="Dto\Events\MemberTerminated.fs" />
+      <Compile Include="Dto\Events\MemberCancelled.fs" />
+      <Compile Include="Dto\Events\MemberEmploymentUpdate.fs" />
+      <Compile Include="Dto\Events\MemberProfileUpdate.fs" />
+      <Compile Include="Dto\Events\MemberTaxProvinceUpdate.fs" />
+      <Compile Include="Dto\Events\MemberIncomeUpdate.fs" />
+      <Compile Include="Dto\Events\DependentTerminated.fs" />
+      <Compile Include="Dto\Events\SpouseTerminated.fs" />
+      <Compile Include="Dto\Events\MemberCobUpdated.fs" />
+      <Compile Include="Dto\Events\DependentProfileUpdated.fs" />
+      <Compile Include="Dto\Events\SpouseProfileUpdated.fs" />
+      <Compile Include="Dto\Events\SpouseCohabUpdated.fs" />
+      <Compile Include="Dto\Events\MemberBenefitClassTransferred.fs" />
+      <Compile Include="Dto\Events\DependentDisabilityUpdated.fs" />
+      <Compile Include="Dto\Events\DependentPostSecondaryEducationUpdated.fs" />
+      <Compile Include="Dto\Events\MemberReinstatementConfirmed.fs" />
+      <Compile Include="Dto\Events\Dto.fs" />
+      <Compile Include="Dto\JsonDeserialization.fs" />
+      <Compile Include="Dto\ToDto.fs" />
+      <Compile Include="Models.fs" />
+      <Compile Include="CertificateUsage.fs" />
+      <Compile Include="EventStore.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EventStore.Client" Version="22.0.0" />
+      <PackageReference Include="EventStore.Client.Grpc" Version="23.0.0" />
+      <PackageReference Include="EventStore.Client.Grpc.Streams" Version="23.0.0" />
+      <PackageReference Include="FSharp.Control.AsyncSeq" Version="3.2.1" />
+      <PackageReference Include="JorgeSerrano.Json.JsonSnakeCaseNamingPolicy" Version="0.9.0" />
+      <PackageReference Include="Serilog" Version="2.12.0" />
+    </ItemGroup>
+
+</Project>

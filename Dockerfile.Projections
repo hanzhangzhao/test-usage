@@ -1,0 +1,6 @@
+FROM curlimages/curl:8.3.0
+
+WORKDIR /home/curl_user
+COPY . .
+
+ENTRYPOINT ["/usr/bin/env", "sh", "./create_projections.sh"]

@@ -1,0 +1,33 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /source
+
+COPY CertificateUsage.sln .
+COPY CertificateUsage/. ./CertificateUsage/
+COPY CertificateUsage.Listener/. ./CertificateUsage.Listener/
+COPY CertificateUsage.Api/. ./CertificateUsage.Api/
+COPY CertificateUsage.Tests/. ./CertificateUsage.Tests/
+COPY CertificateUsage.Migrations/. ./CertificateUsage.Migrations/
+COPY CertificateUsage.Tests.Behaviour/. ./CertificateUsage.Tests.Behaviour/
+
+RUN dotnet build
+
+RUN dotnet publish "CertificateUsage.Migrations/CertificateUsage.Migrations.fsproj" -c Release -o /app --self-contained false --no-restore
+
+# final stage/image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+
+ARG user=cert-usage group=cert-usage uid=2001 gid=2001
+
+RUN groupadd -g ${gid} ${group}; \
+  useradd -l -u ${uid} -g ${group} -s /bin/sh -m ${user}
+
+# Switch to user
+USER ${uid}:${gid}
+
+WORKDIR /app
+COPY --from=build /app .
+
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 \
+  DOTNET_RUNNING_IN_CONTAINER=true
+
+CMD ["dotnet", "CertificateUsage.Migrations.dll"]

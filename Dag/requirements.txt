@@ -1,0 +1,5 @@
+pytest==7.3.2
+apache-airflow==2.6.1
+apache-airflow-providers-amazon==8.1.0
+pytest-mock==3.11.1
+pytest-cov==4.1.0

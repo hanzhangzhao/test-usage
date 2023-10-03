@@ -1,0 +1,7 @@
+module Usage.Dto.Events.Certificate
+
+open PolicyNumber
+
+type Certificate =
+      { CertificateNumber: string
+        PolicyNumber: PolicyNumber }
